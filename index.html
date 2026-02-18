@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nail Disease Predictor</title>
+</head>
+<body>
+
+    <h1>Upload Nail Image</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text|safe }}</h2>
+    {% endif %}
+
+</body>
+</html>
